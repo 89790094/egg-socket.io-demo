@@ -11,3 +11,25 @@
     "socket.io-client": "^2.0.1"
   }
 ```
+* config.default.js
+```
+io: {
+        namespace: {
+            '/': {
+                connectionMiddleware: ['conn'],
+                packetMiddleware: ['handle']
+            },
+            '/index': {
+                connectionMiddleware: ['conn'],
+                packetMiddleware: ['handle']
+            }
+        }
+    }
+```
+* plugin.js
+```
+io: {
+        enable: true,
+        package: 'egg-socket.io',
+    }
+```
